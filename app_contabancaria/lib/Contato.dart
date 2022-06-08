@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
  
-class Sobre extends StatelessWidget {
-  const Sobre({Key? key}) : super(key: key);
+class Contato extends StatelessWidget {
+  const Contato({Key? key}) : super(key: key);
  
   @override
   Widget build(BuildContext context) {
@@ -11,6 +11,6 @@ class Sobre extends StatelessWidget {
   }
  
   _body(BuildContext context) {
-    return Center(child: Text('Tela Sobre'));
+    return Center(child: Text('Tela Contato'));
   }
 }
