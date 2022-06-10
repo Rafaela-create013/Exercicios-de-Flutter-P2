@@ -11,18 +11,17 @@ class _HomeState extends State<Home> {
   TextEditingController nomeController = TextEditingController();
   TextEditingController idadeController = TextEditingController();
 
-    String nome = "";
-    String idade = "";
+  String infoResultado = "Dados";
+  String Idade = "";
 
   void _salvaDados() {
     setState(() {
       
       String nome = nomeController.text;
-      String idade = idadeController.text;
+      double idade = double.parse(idadeController.text);
 
-      nome = "Seu nome é: $nome";
-      idade = "Sua idade é: $idade";
-
+      infoResultado = "Seu nome é: $nome";
+      Idade = 'Idade: $idade anos';
     });
   }
  
@@ -63,17 +62,18 @@ class _HomeState extends State<Home> {
   }
  
 
-  _campo(labelTitulo, objController) {
+   _campo(labelTitulo, objController) {
     return TextField(
       keyboardType: TextInputType.text,
-      decoration:
-          InputDecoration(border: InputBorder.none,
-          icon: Icon(Icons.person),
-          hintText: 'Informe o nome'),
-      style: TextStyle(color: Colors.green, fontSize: 20.0),
+      decoration: InputDecoration(
+          labelText: "Digite o seu nome",
+          labelStyle: TextStyle(color: Colors.green)),
+      textAlign: TextAlign.center,
+      style: TextStyle(color: Colors.green, fontSize: 25.0),
       controller: objController,
     );
   }
+  
 
   _botao(BuildContext context, String textoBotao) {
     return RaisedButton(
@@ -96,7 +96,7 @@ class _HomeState extends State<Home> {
       context,
       MaterialPageRoute(
         builder: (BuildContext context) {
-        return Sobre(valueNome: nome, valueIdade: idade);
+        return Sobre(valueNome: infoResultado, valueIdade: Idade);
       }),
     );
   }

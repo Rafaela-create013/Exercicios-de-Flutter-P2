@@ -35,34 +35,34 @@ class Sobre extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-           _textNome(),
-           _textIdade(),
+           _Nome(),
+           _Idade(),
           ],
         ),
       ),
     );
   }
 
-  _textNome() {
+  _Nome() {
     return Container(
       child: Text(
         valueNome,
         textAlign: TextAlign.center,
         style: TextStyle(
-            color: Color.fromARGB(255, 0, 0, 0),
+            color: Colors.black,
             fontSize: 20,
           ),
       ),
     );
  }
 
-   _textIdade() {
+ _Idade() {
     return Container(
       child: Text(
         valueIdade,
         textAlign: TextAlign.center,
         style: TextStyle(
-            color: Color.fromARGB(255, 0, 0, 0),
+            color: Colors.black,
             fontSize: 20,
           ),
       ),

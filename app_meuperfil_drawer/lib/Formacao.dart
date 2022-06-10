@@ -10,14 +10,6 @@ class Formacao extends StatelessWidget {
     );
   }
  
-  _titulo() {
-    return AppBar(
-      title: Text("Imagens"),
-      centerTitle: true,
-      backgroundColor: Colors.green,
-    );
-  }
- 
  _corpo(BuildContext contex) {
   return SingleChildScrollView(
     child: Container(
